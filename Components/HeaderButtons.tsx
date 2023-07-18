@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
 
 export const HeaderButtons = () => {
   return (
@@ -50,7 +51,7 @@ export const HeaderButtons = () => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 170,
+    height: 160,
     paddingTop: 60,
     backgroundColor: "#07201d",
     borderBottomWidth: 1,
@@ -64,8 +65,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    bottom: 9,
-    left: 37,
+    bottom: 14,
+    left: 48,
     
   },
   row: {
@@ -104,21 +105,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
     bottom: 10,
-    left: 30,
+    left: 40,
   },
   circleText: {
     color: "black",
-    fontSize: 15,
+    fontSize: 13,
     fontWeight: "bold",
     position: "absolute",
-    bottom: 14,
-    left: 32,
+    bottom: 12,
+    left: 42,
    
   },
   Text: {
     color: "gray",
     fontSize: 24,
     fontWeight: 'bold',
-    left: 15
+  
   },
 });
