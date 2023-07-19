@@ -6,7 +6,8 @@ import TiltedArrowIcon from "../Components/TiltedArrowIcon";
 import PhoneIcon from "../Components/PhoneIcon";
 import { CallerAdder } from "../Components/CallerAdder";
 import CallScreenFooter from "../Components/CallerScreenFooter";
-import { Divider } from "react-native-elements";
+import { Divider } from "react-native-elements"
+
 
 export const CallScreen = () => {
   return (

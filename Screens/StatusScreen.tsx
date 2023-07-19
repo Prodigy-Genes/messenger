@@ -75,10 +75,10 @@ export const StatusScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#07201d",
+    backgroundColor: "#121a17",
   },
   addStatusButton: {
-    backgroundColor: "#07201d",
+    backgroundColor: "#121a17",
     padding: 16,
     flexDirection: "row",
     alignItems: "center",

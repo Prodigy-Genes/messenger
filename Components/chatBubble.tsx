@@ -5,10 +5,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 
 export const ChatBubble =() => {
-    const handleChatPress = () => {
+const handleChatPress = () => {
     // Handle chat press event
   };
-
+    
   const handleAddChatPress = () => {
     // Handle add chat press event
   };

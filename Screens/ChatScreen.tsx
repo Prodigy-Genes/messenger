@@ -1,132 +1,102 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import { IconProps } from 'react-native-vector-icons/Icon';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import Ionicons from 'react-native-vector-icons'
 
-type ChatScreenProps = {
-  sender: string;
-  receiver: string;
-  message: string;
-  messageStatus: "sent" | "delivered" | "seen";
-  unreadMessages: number;
-  timeSent: string;
-  profileImage: string;
-  onPress: () => void;
+export const ChatScreen = () =>{
+    return(
+        <ScrollView style={styles.container}>
+           <TouchableOpacity activeOpacity={0.7}>
+            <View style={styles.ProfileContainer}>
+              <TouchableOpacity activeOpacity={0.7}>
+                <Image
+                  source={{
+                    uri: "https://images.unsplash.com/photo-1594897030264-ab7d87efc473?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNwbGFzaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+                  }}
+                  style={styles.ProfileImage}
+                />
+              </TouchableOpacity>
+              <View style={styles.ProfileInfo}>
+                <Text style={styles.ProfileName}>Nana Ama</Text>
+                <Text style={styles.ProfileMessage}>Hi</Text>
+              </View>
+              <View style={styles.MessageCount}>
+                <Text style={styles.MessageCountText}>3</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity activeOpacity={0.7}>
+            <View style={styles.ProfileContainer}>
+              <TouchableOpacity activeOpacity={0.7}>
+                <Image
+                  source={{
+                    uri: "https://media.istockphoto.com/id/1415844380/photo/water-leaf-splash-wave-isolated-on-the-white-background.webp?b=1&s=170667a&w=0&k=20&c=8zQWSsssMT-xrkj8MNcUPGLs1suOlMXi8YgyZorUpjg=",
+                  }}
+                  style={styles.ProfileImage}
+                />
+              </TouchableOpacity>
+              <View style={styles.ProfileInfo}>
+                <Text style={styles.ProfileName}>Dorothy</Text>
+                <Text style={styles.ProfileMessage}>Hi</Text>
+              </View>
+              <View style={styles.MessageCount}>
+                <Text style={styles.MessageCountText}>1</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+
+
+          
+        </ScrollView>
+    )
 }
 
-export const ChatScreen = ({
-  sender,
-  receiver,
-  message,
-  messageStatus,
-  unreadMessages,
-  timeSent,
-  profileImage,
-  onPress,
-}: ChatScreenProps) => {
-  const getMessageStatusIcon = (): IconProps['name'] => {
-    if (messageStatus === 'sent') {
-      return 'checkmark';
-    } else if (messageStatus === 'delivered') {
-      return 'checkmark-done';
-    } else if (messageStatus === 'seen') {
-      return 'checkmark-done-sharp';
-    } else {
-      return 'checkmark';
+
+const styles=StyleSheet.create({
+    container:{
+        flex: 1,
+        backgroundColor:"#121a17"
+    },
+    ProfileContainer:{
+        height: 71,
+        marginTop: 9,
+        flexDirection: "row",
+    },
+    ProfileInfo:{
+        flexDirection: "column",
+    },
+    ProfileImage :{
+        width: 60,
+        height: 60,
+        borderRadius: 30,
+        marginLeft: 20,
+        marginTop: 10
+    },
+    ProfileName:{
+        fontSize: 16,
+        color:"#ffffff",
+        marginLeft: 12,
+        marginTop: 15
+    },
+    ProfileMessage:{
+        fontSize: 14,
+        color: "#aca9a9",
+        marginLeft: 12
+    },
+    MessageCount: {
+        width: 20,
+        height: 20,
+        borderRadius: 10,
+        backgroundColor: "#08ffc1",
+        justifyContent: "center",
+        alignItems: "center",
+        marginLeft: "auto",
+        marginRight: 10,
+        top: 40
+    },
+    MessageCountText: {
+        color: "#121a17",
+        fontSize: 12,
+        fontWeight: "bold"
     }
-  };
-
-  return (
-    <TouchableOpacity onPress={onPress} style={styles.container}>
-      <TouchableOpacity style={styles.profileImageContainer}>
-        <Image source={{uri: profileImage}} style={styles.profileImage} />
-        {unreadMessages > 0 && <View style={styles.circle}><Text style={styles.circleText}>{unreadMessages}</Text></View>}
-      </TouchableOpacity>
-      <View style={styles.detailsContainer}>
-        <Text style={styles.sender}>{sender}</Text>
-        <Text style={styles.message}>{message}</Text>
-        <View style={styles.statusContainer}>
-          <Icon
-            name={getMessageStatusIcon()}
-            size={16}
-            color={messageStatus === 'seen' ? 'blue' : 'gray'}
-          />
-          <Text style={styles.timeSent}>{timeSent}</Text>
-        </View>
-      </View>
-    </TouchableOpacity>
-  );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  profileImageContainer: {
-    borderRadius: 25,
-    marginRight: 12,
-  },
-  profileImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-  },
-  detailsContainer: {
-    flex: 1,
-  },
-  sender: {
-    fontSize: 16,
-    marginBottom: 4,
-    color: 'white',
-  },
-  message: {
-    position: "absolute",
-    fontSize: 14,
-    color: 'gray',
-    top:22,
-    left: 18
-  },
-  statusContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  timeSent: {
-    position: "absolute",
-    marginLeft: 280,
-    fontSize: 12,
-    color: "#4d9e95",
-    top: -20
-  },
-  circle: {
-    backgroundColor: "#4d9e95",
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    top: 30,
-    right: -320,
-  },
-  circleText: {
-    color: "#07201d",
-    fontSize: 12,
-    fontWeight: 'bold',
-  },
-  circle1: {
-    backgroundColor: "#4d9e95",
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    bottom: 16,
-    right: 16,
-  },
 });
-
-export default ChatScreen;

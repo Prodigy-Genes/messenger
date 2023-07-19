@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import { HomeTabs } from "../Navigations/HomeTabs";
+
 
 
 export const HeaderButtons = () => {
@@ -26,10 +28,10 @@ export const HeaderButtons = () => {
       <View style={styles.tabsContainer}>
 
       <TouchableOpacity>
-        <MaterialIcons name="group" size={20} color="grey" />
+        <MaterialIcons name="groups" size={24} color="grey" />
       </TouchableOpacity>
         
-        <TouchableOpacity>
+        <TouchableOpacity >
           <View>
             <Text style={styles.crewText}>Chats</Text>
             <View style={styles.circle} />
@@ -53,20 +55,20 @@ const styles = StyleSheet.create({
   headerContainer: {
     height: 160,
     paddingTop: 60,
-    backgroundColor: "#07201d",
+    backgroundColor: "#16161646",
     borderBottomWidth: 1,
     justifyContent: "space-around"
   },
   smalldot: {
     backgroundColor: "grey",
-    width: 10,
-    height: 10,
-    borderRadius: 5,
+    width: 9,
+    height: 9,
+    borderRadius: 4.5,
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    bottom: 14,
-    left: 48,
+    bottom: 8,
+    left: 50,
     
   },
   row: {
@@ -104,22 +106,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    bottom: 10,
-    left: 40,
+    bottom: 0,
+    left: 50,
   },
   circleText: {
     color: "black",
     fontSize: 13,
     fontWeight: "bold",
     position: "absolute",
-    bottom: 12,
-    left: 42,
+    bottom: 2,
+    left: 51,
    
   },
   Text: {
     color: "gray",
     fontSize: 24,
     fontWeight: 'bold',
+    marginLeft: 10
   
   },
 });
