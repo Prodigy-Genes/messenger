@@ -10,7 +10,7 @@ export const AddStatusCamera = () =>{
     }
 
     return (
-        <TouchableOpacity style={styles.container} onPress={handleaddStatusCameraPress}>
+        <TouchableOpacity style={styles.container} onPress={handleaddStatusCameraPress} activeOpacity={0.7}>
             <View style={styles.circle}>
                 <Icon name="ios-camera" size={24} color="white"/>
             </View>

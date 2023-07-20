@@ -1,7 +1,6 @@
 import React from "react";
 import { View, ScrollView, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { HeaderButtons } from "../Components/HeaderButtons";
 import TiltedArrowIcon from "../Components/TiltedArrowIcon";
 import PhoneIcon from "../Components/PhoneIcon";
 import { CallerAdder } from "../Components/CallerAdder";
@@ -12,9 +11,8 @@ import { Divider } from "react-native-elements"
 export const CallScreen = () => {
   return (
     <View style={styles.container}>
-      <HeaderButtons />
-      <ScrollView>
-        <TouchableOpacity style={styles.CreateCall}>
+       <ScrollView>
+        <TouchableOpacity style={styles.CreateCall} activeOpacity={0.7}>
           <View style={styles.CreateCallcircle}>
             <Ionicons name="link-outline" size={26} color="white" style={styles.icon} />
           </View>
@@ -22,13 +20,13 @@ export const CallScreen = () => {
             <Text style={styles.createText}>Create call link</Text>
             <Text style={styles.shareText}>Share a link for your WhatsApp call</Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity >
         <View style={styles.Recent}>
           <Text style={styles.recent}>Recent</Text>
         </View>
         <View style={styles.recentCalls}>
-          <TouchableOpacity style={styles.Calls}>
-            <TouchableOpacity><Image
+          <TouchableOpacity style={styles.Calls} activeOpacity={0.7}>
+            <TouchableOpacity activeOpacity={0.7}><Image
               source={{
                 uri: "https://images.unsplash.com/photo-1515463138280-67d1dcbf317f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNwbGFzaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
               }}
@@ -43,8 +41,8 @@ export const CallScreen = () => {
               </View>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.Calls}>
-            <TouchableOpacity><Image
+          <TouchableOpacity style={styles.Calls} activeOpacity={0.7}>
+            <TouchableOpacity activeOpacity={0.7}><Image
               source={{
                 uri: "https://media.istockphoto.com/id/1403278751/photo/abstract-particle-background.webp?b=1&s=170667a&w=0&k=20&c=BdJSofDWBiySpZe_-SgecLnt9MB5ZBp1FtCIGaNASB8="
               }}
@@ -71,10 +69,10 @@ export const CallScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#07201d",
+    backgroundColor: "#121a17",
   },
   CreateCall: {
-    backgroundColor: "#07201d",
+    backgroundColor: "#121a17",
     padding: 16,
     flexDirection: "row",
     alignItems: "center",
@@ -116,7 +114,7 @@ const styles = StyleSheet.create({
   },
   recentCalls: {
     flex: 1,
-    backgroundColor: "#07201d",
+    backgroundColor: "#121a17",
   },
   Calls: {
     flexDirection: "row",

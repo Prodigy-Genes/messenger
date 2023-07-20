@@ -10,7 +10,7 @@ export const CallerAdder =() =>{
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity>
+            <TouchableOpacity activeOpacity={0.7}>
                 <View style={styles.circle}><MaterialIcons name="add-call" size={24} color="white"/></View>
             </TouchableOpacity>
         </View>

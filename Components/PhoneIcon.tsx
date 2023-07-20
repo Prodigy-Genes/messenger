@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const PhoneIcon = ({ size = 24, color = "#169c8d" }) => {
   return (
     <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.7}>
             <Ionicons name="call-outline" size={size} color={color} />
         </TouchableOpacity>
     </View>

@@ -1,4 +1,4 @@
-import React from "react";
+/**import React from "react";
 import { View, Text, Button } from "react-native";
 import { NavigationProps } from "../App";
 
@@ -12,4 +12,6 @@ export const FirstScreen: React.FC<NavigationProps> =({navigation}) => {
             />
         </View>
     )
-}
+} **/
+
+/* Was using this file to study navigation*/ 

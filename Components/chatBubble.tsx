@@ -17,7 +17,7 @@ const handleChatPress = () => {
 
     return (
 
-        <TouchableOpacity style={styles.addChatButton} onPress={handleAddChatPress}>
+        <TouchableOpacity style={styles.addChatButton} onPress={handleAddChatPress} activeOpacity={0.7}>
             <View style={styles.addChatCircle}>
             <Icon name="chatbubble-ellipses-outline" size={24} color="white" />
             </View>

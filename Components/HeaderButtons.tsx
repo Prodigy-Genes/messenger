@@ -30,22 +30,6 @@ export const HeaderButtons = () => {
       <TouchableOpacity>
         <MaterialIcons name="groups" size={24} color="grey" />
       </TouchableOpacity>
-        
-        <TouchableOpacity >
-          <View>
-            <Text style={styles.crewText}>Chats</Text>
-            <View style={styles.circle} />
-             <Text style={styles.circleText}>18</Text>
-          </View>
-          
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.crewText}>Status </Text>
-          <View style={styles.smalldot} /> 
-        </TouchableOpacity> 
-        <TouchableOpacity>
-          <Text style={styles.crewText}>Calls </Text>
-        </TouchableOpacity>
       </View>
     </View>
   );

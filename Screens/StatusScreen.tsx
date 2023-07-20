@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import { HeaderButtons } from "../Components/HeaderButtons";
 import { AddStatusCamera } from "../Components/addStatusCamera";
 import { WriteStatus } from "../Components/WriteStatus";
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -10,8 +9,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 export const StatusScreen = () => {
   return (
     <View style={styles.container}>
-      <HeaderButtons />
-      
+       
       <TouchableOpacity style={styles.addStatusButton}>
         <Image
           source={{

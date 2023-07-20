@@ -1,11 +1,12 @@
 import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
 import Ionicons from 'react-native-vector-icons'
+import ChatBubble from "../Components/chatBubble";
 
 export const ChatScreen = () =>{
     return(
-        <ScrollView style={styles.container}>
-           <TouchableOpacity activeOpacity={0.7}>
+        <View style={styles.container}>
+           <ScrollView><TouchableOpacity activeOpacity={0.7}>
             <View style={styles.ProfileContainer}>
               <TouchableOpacity activeOpacity={0.7}>
                 <Image
@@ -43,11 +44,11 @@ export const ChatScreen = () =>{
                 <Text style={styles.MessageCountText}>1</Text>
               </View>
             </View>
-          </TouchableOpacity>
-
+          </TouchableOpacity></ScrollView>
+        <ChatBubble />
 
           
-        </ScrollView>
+        </View>
     )
 }
 

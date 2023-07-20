@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { View, Text, Button } from "react-native";
 import { NavigationProps } from "../App";
 
@@ -13,4 +13,6 @@ export const SecondScreen: React.FC<NavigationProps>=({navigation}) => {
             />
         </View>
     )
-}
+}*/
+
+//was learning stack navigation with this

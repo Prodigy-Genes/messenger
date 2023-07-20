@@ -1,18 +1,16 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { HeaderButtons } from "../Components/HeaderButtons";
 import ChatBubble from "../Components/chatBubble";
 import { ChatScreen } from "./ChatScreen";
+import { HomeTabs } from "../Navigations/HomeTabs";
 
 
 export const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <HeaderButtons />  
-      <ChatScreen/>
-      <ChatBubble />
+      <HomeTabs/>
     </View>
   );
 };

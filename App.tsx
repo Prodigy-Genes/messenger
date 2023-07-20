@@ -1,6 +1,8 @@
 import React from 'react';
 import { HomeScreen } from './Screens/HomeScreen';
-
+import { HomeTabs } from './Navigations/HomeTabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { View } from 'react-native';
 
 
 
@@ -8,8 +10,9 @@ import { HomeScreen } from './Screens/HomeScreen';
 
 const App = () => {
   return(
-     <HomeScreen/>
-  
+    <NavigationContainer>
+      <HomeScreen />
+    </NavigationContainer>
   )
 }
 export default App;

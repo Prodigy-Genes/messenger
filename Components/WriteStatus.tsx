@@ -10,7 +10,7 @@ export const WriteStatus = () =>{
     }
 
     return (
-        <TouchableOpacity style={styles.container} onPress={handleWriteStatus}>
+        <TouchableOpacity style={styles.container} onPress={handleWriteStatus} activeOpacity={0.7}>
             <View style={styles.circle}>
                 <Icon name="pencil" size={24} color="white" />
             </View>
