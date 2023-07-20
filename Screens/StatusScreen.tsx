@@ -10,7 +10,7 @@ export const StatusScreen = () => {
   return (
     <View style={styles.container}>
        
-      <TouchableOpacity style={styles.addStatusButton}>
+      <TouchableOpacity style={styles.addStatusButton} activeOpacity={0.7}>
         <Image
           source={{
             uri: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3BsYXNofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
@@ -22,7 +22,7 @@ export const StatusScreen = () => {
                 <Text style={styles.addStatusPlus}>+</Text>
             </View>
         </View>
-        <TouchableOpacity style={styles.threedots}>
+        <TouchableOpacity style={styles.threedots} activeOpacity={0.7}>
             <View style={styles.HorizontalIcon}>
                 <Icon name="ellipsis-horizontal" size={20} color="grey" />
             </View>
@@ -38,7 +38,7 @@ export const StatusScreen = () => {
             <Text style={styles.minn}>Recent updates</Text>
         </View>
       <View style={styles.statusContainer}>
-        <TouchableOpacity style={styles.statusItem}>
+        <TouchableOpacity style={styles.statusItem} activeOpacity={0.7}>
           <Image
             source={{
               uri: "https://images.unsplash.com/photo-1515463138280-67d1dcbf317f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNwbGFzaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
@@ -50,7 +50,7 @@ export const StatusScreen = () => {
             <Text style={styles.statusText}>Just now</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.statusItem}>
+        <TouchableOpacity style={styles.statusItem} activeOpacity={0.7}>
           <Image
             source={{
               uri: "https://images.unsplash.com/photo-1594897030264-ab7d87efc473?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNwbGFzaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
