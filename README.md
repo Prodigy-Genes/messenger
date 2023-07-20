@@ -34,7 +34,7 @@ This project is open-source and available under the MIT License.
 Contact
 For any inquiries or questions about this project, you can reach out to the project owner and maintainers:
 
-Maintainer 1: GitHub
-Maintainer 2: GitHub
+Maintainer 1: prodigygenes
+Maintainer 2:bulletoze@gmail.com
 Acknowledgments
 Special thanks to the developers of the various libraries and tools used in this project. Without their hard work and dedication, this project would not have been possible.
